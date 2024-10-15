@@ -62,6 +62,7 @@ PIPELINE_ID = 'your_pipeline_id'  # Optional, defaults to predefined PIPELINE_ID
 
 client = BhashiniClient(USER_ID, API_KEY, PIPELINE_ID)
 ```
+Get free api key and user id from [here](https://bhashini.gov.in/ulca/model/explore-models)
 
 ### Examples
 
