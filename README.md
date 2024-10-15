@@ -134,6 +134,10 @@ Lists the available languages for a specified task.
 **Usage Example**:
 
 ```python
+# FOR TTS
+tts_languages = client.list_available_languages('tts')
+print("TTS Languages:", tts_languages)
+
 # For ASR
 asr_languages = client.list_available_languages('asr')
 print("ASR Languages:", asr_languages)
@@ -142,7 +146,11 @@ print("ASR Languages:", asr_languages)
 translation_languages = client.list_available_languages('translation')
 print("Translation Languages:", translation_languages)
 ```
-
+```python
+TTS Languages: ['en', 'as', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te', 'bn']
+ASR Languages: ['bn', 'en', 'gu', 'hi', 'kn', 'ml', 'mr', 'or', 'pa', 'sa', 'ta', 'te', 'ur']
+Translation Languages: {'bn': ['en', 'as', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te'], 'en': ['as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te'], 'gu': ['en', 'as', 'bn', 'brx', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te'], 'hi': ['en', 'as', 'bn', 'brx', 'gu', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te'], 'kn': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te'], 'ml': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'mni', 'mr', 'or', 'pa', 'ta', 'te'], 'mr': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'or', 'pa', 'ta', 'te'], 'or': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'pa', 'ta', 'te'], 'pa': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'ta', 'te'], 'sa': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te'], 'ta': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'te'], 'te': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta'], 'ur': ['en', 'as', 'bn', 'brx', 'gu', 'hi', 'kn', 'ml', 'mni', 'mr', 'or', 'pa', 'ta', 'te']}
+```
 #### `get_supported_voices(source_language)`
 
 Retrieves supported voices for TTS in the specified language.
